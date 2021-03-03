@@ -1,0 +1,23 @@
+.img {
+  padding: 15px;
+}
+
+.divider {
+  border-bottom: 2px solid black;
+}
+
+.textContainer {
+  padding:5px;
+}
+
+.title {
+  text-align: center;
+}
+
+.text {
+  text-align: center;
+}
+
+.title+.text {
+  margin-top: 10px;
+}
