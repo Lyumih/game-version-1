@@ -4,10 +4,12 @@ import {GameCard} from "./GameCard";
 
 const Template = (args) => <GameCard {...args} />;
 
-export const GameCardWithText = Template.bind({});
-GameCardWithText.args = {
-  title: "Title",
-  text: "Some text"
+export const HeroGameCard = Template.bind({});
+HeroGameCard.args = {
+  title: "Hero",
+  text: "Just a Hero for example",
+  imgSrc: "/img/cards/hero-example-card.jpg",
+  rarity: "rare"
 }
 
 export const EmptyGameCard = Template.bind({});
