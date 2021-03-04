@@ -6,9 +6,9 @@ const ButtonStyled = styled.button`
   padding: 8px;
   border-radius: 5px;
   background-color: white;
-  border: 2px solid blue;
-  box-shadow: 0 0 4px blue;
-  color: blue;
+  border: 2px solid green;
+  box-shadow: 0 0 4px green;
+  color: green;
   :hover {
     opacity: 0.6;
   }
