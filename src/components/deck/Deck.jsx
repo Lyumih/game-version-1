@@ -1,23 +1,37 @@
-import React from 'react';
-import styles from './Deck.module.css'
-import PropTypes from 'prop-types'
+import React from "react";
+import PropTypes from "prop-types";
 
-export const Deck = ({cards, children}) => {
+import styled from "styled-components";
+
+const DeckStyled = styled.div`
+  // padding: 10px;
+  display: flex;
+  overflow: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 8px gray;
+`;
+
+const CardWrapper = styled.div`
+  padding: 10px;
+  display: flex;
+  * + * {
+    margin-left: 20px;
+  }
+`;
+
+export const Deck = ({ cards, children }) => {
   return (
-    <div className={styles.deck}>
-      {cards}
+    <DeckStyled>
+      <CardWrapper>{cards}</CardWrapper>
       {children}
-    </div>
-  )
-}
+    </DeckStyled>
+  );
+};
 
 Deck.propTypes = {
-  cards: PropTypes.array
-}
+  cards: PropTypes.array,
+};
 
 Deck.defaultProps = {
-  cards: []
-}
-
-
-
+  cards: [],
+};

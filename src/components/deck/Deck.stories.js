@@ -2,7 +2,6 @@ import React from 'react';
 import { Deck } from './Deck'
 
 import * as CardStories from '../cards/Card.stories'
-import { Card } from '../cards/Card';
 
 export default {
   title: "Deck/Deck",
