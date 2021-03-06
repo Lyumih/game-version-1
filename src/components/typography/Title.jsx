@@ -1,14 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
+import React from "react";
+import styled from "styled-components";
 
-import styles from './Title.module.css'
-
-export const Title = ({text}) => <span className={styles.title}>{text}</span>
+const TitleWrapper = styled.div`
+  font-size: 20px;
+`;
 
 Title.propTypes = {
-  text: PropTypes.string
-}
+  text: PropTypes.string,
+};
 
 Title.defaultProps = {
-  text: ""
+  text: "",
+};
+
+export default function Title({ text }) {
+  return <TitleWrapper>{text}</TitleWrapper>;
 }

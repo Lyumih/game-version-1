@@ -1,15 +1,30 @@
 import PropTypes from "prop-types";
 import React from "react";
-import { CardImg } from "../images/CardImg";
-import { Text } from "../typography/Text";
-import { Title } from "../typography/Title";
+import styled from "styled-components";
+import CardImg from "../images/CardImg";
+import Text from "../typography/Text";
+import Title from "../typography/Title";
 import Card from "./Card";
-import styles from "./GameCard.module.css";
-import styled from "styled-components"
 
 const Divider = styled.div`
   border-bottom: 2px solid black;
+`;
+
+const ContentTextWrapper = styled.div`
+  text-align: center;
+`;
+
+const TitleWrapper = styled(Title)`
+  margin-bottom: 10px;
 `
+
+const ImageWrapper = styled.div`
+  padding: 10px;
+  margin: auto;
+  text-align: center;
+  width: 120px;
+  height: 120px;
+`;
 
 GameCard.propTypes = {
   id: PropTypes.string,
@@ -27,21 +42,24 @@ GameCard.defaultProps = {
   imgSrc: "/img/cards/default-card-img.svg",
 };
 
-export default function GameCard({id, rarity, title, text, imgSrc, children }) {
+export default function GameCard({
+  id,
+  rarity,
+  title,
+  text,
+  imgSrc,
+  children,
+}) {
   return (
     <Card id={id} rarity={rarity}>
-      <div className={styles.img}>
+      <ImageWrapper>
         <CardImg imgSrc={imgSrc} />
-      </div>
+      </ImageWrapper>
       <Divider />
-      <div className={styles.textContainer}>
-        <div className={styles.title}>
-          <Title text={title} />
-        </div>
-        <div className={styles.text}>
-          <Text text={text} />
-        </div>
-      </div>
+      <ContentTextWrapper>
+        <TitleWrapper text={title}/>
+        <Text text={text} />
+      </ContentTextWrapper>
       {children}
     </Card>
   );

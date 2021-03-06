@@ -1,5 +1,5 @@
 import React from 'react';
-import { CardImg } from './CardImg'
+import CardImg from './CardImg'
 
 export default {
   title: "Img/CardImg",

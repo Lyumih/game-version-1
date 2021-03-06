@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types'
-export const Text = ({text}) => <span>{text}</span>
 
 Text.propTypes = {
   text: PropTypes.string
@@ -9,3 +8,7 @@ Text.propTypes = {
 Text.defaultProps = {
   text: ""
 }
+
+export default function Text ({text}){
+  return <div>{text}</div>
+} 
