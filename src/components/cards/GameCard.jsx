@@ -7,6 +7,7 @@ import { Title } from "../typography/Title";
 import { Text } from "../typography/Text";
 
 GameCard.propTypes = {
+  id: PropTypes.string,
   imgSrc: PropTypes.string,
   title: PropTypes.string,
   text: PropTypes.string,
@@ -14,15 +15,16 @@ GameCard.propTypes = {
 };
 
 GameCard.defaultProps = {
+  id: "",
   title: "",
   text: "",
   rarity: "common",
   imgSrc: "/img/cards/default-card-img.svg",
 };
 
-export default function GameCard({ rarity, title, text, imgSrc, children }) {
+export default function GameCard({id, rarity, title, text, imgSrc, children }) {
   return (
-    <Card rarity={rarity}>
+    <Card id={id} rarity={rarity}>
       <div className={styles.img}>
         <CardImg imgSrc={imgSrc} />
       </div>

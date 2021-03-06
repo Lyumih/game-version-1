@@ -1,5 +1,5 @@
 import React from 'react';
-import { Deck } from './Deck'
+import Deck from './Deck'
 
 import * as CardStories from '../cards/Card.stories'
 

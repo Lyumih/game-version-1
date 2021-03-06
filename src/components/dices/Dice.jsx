@@ -14,11 +14,13 @@ const DiceStyled = styled.div`
 
 Dice.propTypes = {
   value: PropTypes.number,
+  id: PropTypes.string,
   onClick: PropTypes.func
 }
 
 Dice.defaultProps = {
-  value: 1
+  value: 1,
+  id: 'dice-id'
 }
 
 export default function Dice({value, onClick}) {

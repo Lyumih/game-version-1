@@ -1,12 +1,12 @@
 import {Card} from "./components/cards/Card";
 import {GameCard} from './components/cards/GameCard';
+import Game from "./components/games/Game";
 function App() {
   return (
     <div className="App">
       <header>Моя игра</header>
       <div>
-        <Card>123</Card>
-        <GameCard>456</GameCard>
+        <Game />
       </div>
     </div>
   );
