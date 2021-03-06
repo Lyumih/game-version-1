@@ -5,7 +5,9 @@ import styled from "styled-components";
 
 const DeckStyled = styled.div`
   // padding: 10px;
+  height: 300px;
   display: flex;
+  align-items: center;
   overflow: auto;
   border-radius: 10px;
   box-shadow: 0 0 8px gray;

@@ -3,20 +3,21 @@ import PropTypes from "prop-types";
 
 import styles from "./Card.module.css";
 
-export const Card = ({ rarity , children}) => {
+Card.propTypes = {
+  rarity: PropTypes.oneOf(["common", "rare", "legendary"]),
+  id: PropTypes.string
+};
+
+Card.defaultProps = {
+  rarity: "common",
+  id: ""
+};
+
+export default function Card ({ rarity, id, children}) {
   return (
     <div className={`${styles.layout} ${styles[rarity]}`}>
       {children}
     </div>
   );
 };
-
-Card.propTypes = {
-  rarity: PropTypes.oneOf(["common", "rare", "legendary"]),
-};
-
-Card.defaultProps = {
-  rarity: "common",
-};
-
 

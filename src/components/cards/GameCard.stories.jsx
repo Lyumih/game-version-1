@@ -1,6 +1,6 @@
 /* eslint-disable import/no-anonymous-default-export */
 import React from "react";
-import {GameCard} from "./GameCard";
+import GameCard from "./GameCard";
 
 const Template = (args) => <GameCard {...args} />;
 

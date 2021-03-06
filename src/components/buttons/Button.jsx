@@ -14,15 +14,16 @@ const ButtonStyled = styled.button`
   }
 `;
 
-export const Button = ({ label }) => {
-  if (!label) return null;
-  return <ButtonStyled type="button">{label}</ButtonStyled>;
-};
-
 Button.propTypes = {
   label: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 Button.defaultProps = {
   label: "",
+};
+
+export default function Button ({ label, onClick }) {
+  if (!label) return null;
+  return <ButtonStyled type="button" onClick={onClick}>{label}</ButtonStyled>;
 };
